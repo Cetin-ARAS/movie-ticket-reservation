@@ -1,10 +1,12 @@
 body {
     background-color: #292929;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
+    color: #ffff;
 }
 
 .seat {
@@ -19,6 +21,12 @@ body {
 }
 .seat.reserved{
     background-color: #6a1bd2
+    
+}
+.seat:not(.reserved):hover {
+    cursor: pointer;
+    transform: scale(1.4);
+
 }
 .seat:nth-of-type(2){
     margin-right: 20px;
@@ -37,4 +45,23 @@ body {
     margin: 20px 0;
     box-shadow:0 3px 8px rgba(255, 255, 255, 0.7) ;
 
+}
+.movie-list{
+    margin: 20px 0;
+}
+.info{
+    background-color: rgba(0, 0, 0, 0.2);
+    padding:5px 10px;
+    color: #ffff;
+    display: flex;
+    
+}
+.info li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+p.text span{
+    color: #f6b6ff;
 }
